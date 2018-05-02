@@ -1,20 +1,89 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- <div class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Medium User Viewer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown" >
+            <a class="nav-link" >หน้าหลัก</a>
 
+          </li>
+      </ul>
+      <div class="">
+        <ul class=" my-2 my-lg-0 navbar-nav mr-auto">
+            <ng-container *ngIf="code != null && state != null;else notsignin">
+            <li class="nav-item dropdown" ngbDropdown >
+                <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>จัดการ</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ng-container>
+            <ng-template #notsignin>
+              <li class="nav-item "  >
+                <a class="nav-link"  [attr.href]="url">Sign in</a>
+              </li>
+            </ng-template>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div> -->
+
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Medium User Viewer </span>
+      <span class="d-none d-lg-block">
+        <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt=""> -->
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class=" my-2 my-lg-0 navbar-nav mr-auto">
+        <ng-container *ngIf="code != null && state != null;else notsignin">
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>จัดการ</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </li>
+        </ng-container>
+        <ng-template #notsignin>
+          <li class="nav-item ">
+            <a class="nav-link" [attr.href]="url">Sign in</a>
+          </li>
+        </ng-template>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <h2 class="mb-5">Experience</h2>
+        <div class="row">
+          <div class="col-md-12">
+            TEST
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+
+  <router-outlet></router-outlet>

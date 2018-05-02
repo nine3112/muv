@@ -5,5 +5,10 @@
 
 export const environment = {
   production: false ,
-  medium_url: 'https://medium.com/m/oauth/authorize'
+  medium_url: 'https://medium.com',
+  medium_api: 'https://api.medium.com',
+  nodejs: 'http://localhost:8000',
+  client_id: '9964c11e229b',
+  client_secret: '67f48d382b16cffbbe67d71e49d9c9f5ba325a5e',
+  return_url: 'https://mediumviewer.firebaseapp.com'
 };

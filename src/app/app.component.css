@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../assets/resume/css/resume.css";
+
+a {
+    cursor: pointer;
+}
