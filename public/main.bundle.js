@@ -27,7 +27,7 @@ module.exports = "/*!\n * Bootstrap v4.1.1 (https://getbootstrap.com/)\n * Copyr
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"container\">\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\" href=\"#\">Medium User Viewer</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item dropdown\" >\n            <a class=\"nav-link\" >หน้าหลัก</a>\n\n          </li>\n      </ul>\n      <div class=\"\">\n        <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n            <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n            <li class=\"nav-item dropdown\" ngbDropdown >\n                <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n                  <a class=\"dropdown-item\" href=\"#\">Profile</a>\n                  <a class=\"dropdown-item\" href=\"#\">Log out</a>\n                </div>\n              </li>\n            </ng-container>\n            <ng-template #notsignin>\n              <li class=\"nav-item \"  >\n                <a class=\"nav-link\"  [attr.href]=\"url\">Sign in</a>\n              </li>\n            </ng-template>\n          </ul>\n        </div>\n    </div>\n  </nav>\n</div> -->\n\n\n<body id=\"page-top\">\n\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary fixed-top\" id=\"sideNav\">\n    <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">\n      <span class=\"d-block d-lg-none\">Medium User Viewer </span>\n      <span class=\"d-none d-lg-block\">\n        <!-- <img class=\"img-fluid img-profile rounded-circle mx-auto mb-2\" src=\"img/profile.jpg\" alt=\"\"> -->\n      </span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n        <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n          <li class=\"nav-item dropdown\" ngbDropdown>\n            <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n              <a class=\"dropdown-item\" href=\"#\">Profile</a>\n              <a class=\"dropdown-item\" href=\"#\">Log out</a>\n            </div>\n          </li>\n        </ng-container>\n        <ng-template #notsignin>\n          <li class=\"nav-item \">\n            <a class=\"nav-link\" [attr.href]=\"url\">Sign in</a>\n          </li>\n        </ng-template>\n      </ul>\n    </div>\n  </nav>\n\n  <div class=\"container-fluid p-0\">\n\n\n\n    <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"experience\">\n      <div class=\"my-auto\">\n        <h2 class=\"mb-5\">Experience</h2>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            TEST\n          </div>\n        </div>\n\n      </div>\n    </section>\n\n\n  </div>\n\n  <router-outlet></router-outlet>\n"
+module.exports = "<!-- <div class=\"container\">\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\" href=\"#\">Medium User Viewer</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item dropdown\" >\n            <a class=\"nav-link\" >หน้าหลัก</a>\n\n          </li>\n      </ul>\n      <div class=\"\">\n        <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n            <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n            <li class=\"nav-item dropdown\" ngbDropdown >\n                <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n                  <a class=\"dropdown-item\" href=\"#\">Profile</a>\n                  <a class=\"dropdown-item\" href=\"#\">Log out</a>\n                </div>\n              </li>\n            </ng-container>\n            <ng-template #notsignin>\n              <li class=\"nav-item \"  >\n                <a class=\"nav-link\"  [attr.href]=\"url\">Sign in</a>\n              </li>\n            </ng-template>\n          </ul>\n        </div>\n    </div>\n  </nav>\n</div> -->\n\n\n<body id=\"page-top\">\n\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary fixed-top\" id=\"sideNav\">\n    <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">\n      <span class=\"d-block d-lg-none\">Medium User Viewer </span>\n      <span class=\"d-none d-lg-block\">\n        <!-- <img class=\"img-fluid img-profile rounded-circle mx-auto mb-2\" src=\"img/profile.jpg\" alt=\"\"> -->\n      </span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n        <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n          <li class=\"nav-item dropdown\" ngbDropdown>\n            <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n              <a class=\"dropdown-item\" href=\"#\">Profile</a>\n              <a class=\"dropdown-item\" href=\"#\">Log out</a>\n            </div>\n          </li>\n        </ng-container>\n        <ng-template #notsignin>\n          <li class=\"nav-item \">\n            <a class=\"nav-link\" [attr.href]=\"url\">Sign in</a>\n          </li>\n        </ng-template>\n      </ul>\n    </div>\n  </nav>\n\n  <div class=\"container-fluid p-0\">\n\n<ng-container *ngIf=\"profile != null\">\n  <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"experience\">\n    <div class=\"my-auto\">\n      <h2 class=\"mb-5\" ><a [href]=\"profile.url\">{{profile.name}} ({{profile.username}})</a></h2>\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <img [src]=\"profile.imageUrl\" alt=\"\">\n        </div>\n      </div>\n\n    </div>\n  </section>\n</ng-container>\n\n\n\n\n  </div>\n\n  <router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -64,12 +64,13 @@ var AppComponent = /** @class */ (function () {
         this.title = 'app';
         this.code = null;
         this.state = null;
-        this.url = 'https://medium.com/m/oauth/authorize?client_id=9964c11e229b&scope=basicProfile,publishPost&state=testing&response_type=code&redirect_uri=' + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].return_url; //https://mediumviewer.firebaseapp.com
+        this.url = 'https://medium.com/m/oauth/authorize?client_id=9964c11e229b&scope=basicProfile,listPublications,publishPost&state=testing&response_type=code&redirect_uri=' + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].return_url; //https://mediumviewer.firebaseapp.com
         this.token_type = null;
         this.access_token = null;
         this.refresh_token = null;
         this.scope = null;
         this.expires_at = null;
+        this.profile = null;
         // });
         console.log(this.getParameterByName('code'), 'TEST');
         if (this.getParameterByName('code') && this.getParameterByName('state')) {
@@ -93,8 +94,18 @@ var AppComponent = /** @class */ (function () {
                 _this.refresh_token = res.refresh_token;
                 _this.scope = res.scope;
                 _this.expires_at = res.expires_at;
-                _this.api.post_test('/v1/me', _this.token_type, _this.access_token).subscribe(function (res_user) {
+                var to = _this.token_type + " " + _this.access_token;
+                var data2 = {
+                    token: to,
+                    path: '/v1/me'
+                };
+                _this.api.post_test('/api', data2).subscribe(function (res_user) {
                     console.log(res_user, 'RES USER');
+                    _this.profile = res_user.data;
+                    data2.path = '/v1/users/' + _this.profile.id + '/publications';
+                    _this.api.post_test('/api', data2).subscribe(function (pub) {
+                        console.log(pub);
+                    });
                 });
                 _this.router.navigate(['/index']);
             });
@@ -228,9 +239,13 @@ var HttpService = /** @class */ (function () {
         //   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         //   'Access-Control-Allow-Origin': '*'
         // });
-        return this.http.get(url, {}).subscribe(function (res) {
-            return console.log(res.text());
-        });
+        // return this.http.get(url, {
+        //   // headers: headers
+        // }).subscribe(res =>
+        //   console.log(res.json())
+        // );
+        return this.http.get(url)
+            .map(function (res) { return res.json(); });
     };
     HttpService.prototype.post = function (url, data) {
         var head = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
@@ -241,26 +256,32 @@ var HttpService = /** @class */ (function () {
         return this.http.post(url, data, options)
             .map(function (res) { return res.json(); });
     };
-    HttpService.prototype.post_test = function (path, type, token) {
-        if (type === void 0) { type = ''; }
-        if (token === void 0) { token = ''; }
-        var to = type + " " + token;
+    // post_test(path, type = '', token = '') {
+    HttpService.prototype.post_test = function (url, data) {
+        // const to = `${type} ${token}`;
+        // const head = new Headers();
+        // head.append('Content-Type', 'application/json');
+        // const options = new RequestOptions({
+        //   headers: head
+        // });
+        // const data = {
+        //   token: to,
+        //   path: path
+        // };
+        // console.log(environment.nodejs);
+        // return this.http.post(environment.nodejs + '/api', data, options)
+        //   .map((res: Response) => res);
         var head = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
         head.append('Content-Type', 'application/json');
-        // head.append('Authorization', `${to}`);
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
-            headers: head
+            headers: head,
+            body: data
         });
-        console.log(this.medium_api + path);
-        var data = {
-            token: to,
-            path: path
-        };
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].nodejs + '/api', data, options)
-            .map(function (res) { return res; });
+        return this.http.options(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].nodejs + url, options)
+            .map(function (res) { return res.json(); });
     };
     HttpService.prototype.medium_api_get = function (path, data) {
-        this.get(this.medium_api + path, data);
+        return this.get(this.medium_api + path, data);
     };
     HttpService.prototype.medium_api_post = function (path, data) {
         return this.post(this.medium_api + path, data);
@@ -361,7 +382,7 @@ var environment = {
     production: false,
     medium_url: 'https://medium.com',
     medium_api: 'https://api.medium.com',
-    nodejs: 'http://localhost:8000',
+    nodejs: 'https://mediumviewer.appspot.com',
     client_id: '9964c11e229b',
     client_secret: '67f48d382b16cffbbe67d71e49d9c9f5ba325a5e',
     return_url: 'https://mediumviewer.firebaseapp.com'

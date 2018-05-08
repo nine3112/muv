@@ -27,12 +27,14 @@ export class AppComponent {
   title = 'app';
   code = null;
   state = null;
-  url = 'https://medium.com/m/oauth/authorize?client_id=9964c11e229b&scope=basicProfile,publishPost&state=testing&response_type=code&redirect_uri=' + environment.return_url; //https://mediumviewer.firebaseapp.com
+  url = 'https://medium.com/m/oauth/authorize?client_id=9964c11e229b&scope=basicProfile,listPublications,publishPost&state=testing&response_type=code&redirect_uri=' + environment.return_url; //https://mediumviewer.firebaseapp.com
   token_type = null;
   access_token = null;
   refresh_token = null;
   scope = null;
   expires_at = null;
+  profile: any = null;
+  publication: any = null;
 
   constructor(public api: HttpService, public router: Router, ) {
     // this.api.get(this.url, '');
@@ -63,8 +65,19 @@ export class AppComponent {
         this.refresh_token = res.refresh_token;
         this.scope = res.scope;
         this.expires_at = res.expires_at;
-        this.api.post_test('/v1/me', this.token_type, this.access_token).subscribe(res_user => {
+        const to = `${this.token_type} ${this.access_token}`;
+        let data2 = {
+          token: to,
+          path: '/v1/me'
+        };
+        this.api.post_test('/api', data2).subscribe(res_user => {
           console.log(res_user, 'RES USER');
+          this.profile = res_user.data;
+          data2.path = '/v1/users/' + this.profile.id + '/publications';
+          this.api.post_test('/api', data2).subscribe(pub => {
+            console.log(pub);
+            this.publication = pub;
+          });
         });
         this.router.navigate(['/index']);
       });

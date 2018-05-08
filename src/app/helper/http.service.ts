@@ -35,11 +35,13 @@ export class HttpService {
     //   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     //   'Access-Control-Allow-Origin': '*'
     // });
-    return this.http.get(url, {
-      // headers: headers
-    }).subscribe(res =>
-      console.log(res.text())
-    );
+    // return this.http.get(url, {
+    //   // headers: headers
+    // }).subscribe(res =>
+    //   console.log(res.json())
+    // );
+    return this.http.get(url)
+    .map((res: Response) => res.json());
 
 
   }
@@ -54,26 +56,34 @@ export class HttpService {
 
   }
 
-  post_test(path, type = '', token = '') {
-    const to = `${type} ${token}`;
+  // post_test(path, type = '', token = '') {
+  post_test(url, data) {
+    // const to = `${type} ${token}`;
+    // const head = new Headers();
+    // head.append('Content-Type', 'application/json');
+    // const options = new RequestOptions({
+    //   headers: head
+    // });
+    // const data = {
+    //   token: to,
+    //   path: path
+    // };
+    // console.log(environment.nodejs);
+    // return this.http.post(environment.nodejs + '/api', data, options)
+    //   .map((res: Response) => res);
     const head = new Headers();
     head.append('Content-Type', 'application/json');
-    // head.append('Authorization', `${to}`);
     const options = new RequestOptions({
-      headers: head
+      headers: head,
+      body: data
     });
-    console.log(this.medium_api + path);
-    const data = {
-      token: to,
-      path: path
-    };
-    return this.http.post(environment.nodejs + '/api', data, options)
-      .map((res: Response) => res);
+    return this.http.options(environment.nodejs + url, options)
+      .map((res: Response) => res.json());
 
   }
 
   medium_api_get(path, data) {
-    this.get(this.medium_api + path, data);
+    return this.get(this.medium_api + path, data);
   }
   medium_api_post(path, data) {
     return this.post(this.medium_api + path, data);
