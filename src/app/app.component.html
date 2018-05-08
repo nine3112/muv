@@ -49,12 +49,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class=" my-2 my-lg-0 navbar-nav mr-auto">
-        <ng-container *ngIf="code != null && state != null;else notsignin">
+        <ng-container *ngIf="profile != null ;else notsignin">
           <li class="nav-item dropdown" ngbDropdown>
             <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>จัดการ</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Log out</a>
+              <!-- <a class="dropdown-item" href="#">Profile</a> -->
+              <a class="dropdown-item" (click)="logout()">Log out</a>
             </div>
           </li>
         </ng-container>

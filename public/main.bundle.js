@@ -27,7 +27,7 @@ module.exports = "/*!\n * Bootstrap v4.1.1 (https://getbootstrap.com/)\n * Copyr
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"container\">\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\" href=\"#\">Medium User Viewer</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item dropdown\" >\n            <a class=\"nav-link\" >หน้าหลัก</a>\n\n          </li>\n      </ul>\n      <div class=\"\">\n        <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n            <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n            <li class=\"nav-item dropdown\" ngbDropdown >\n                <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n                  <a class=\"dropdown-item\" href=\"#\">Profile</a>\n                  <a class=\"dropdown-item\" href=\"#\">Log out</a>\n                </div>\n              </li>\n            </ng-container>\n            <ng-template #notsignin>\n              <li class=\"nav-item \"  >\n                <a class=\"nav-link\"  [attr.href]=\"url\">Sign in</a>\n              </li>\n            </ng-template>\n          </ul>\n        </div>\n    </div>\n  </nav>\n</div> -->\n\n\n<body id=\"page-top\">\n\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary fixed-top\" id=\"sideNav\">\n    <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">\n      <span class=\"d-block d-lg-none\">Medium User Viewer </span>\n      <span class=\"d-none d-lg-block\">\n        <!-- <img class=\"img-fluid img-profile rounded-circle mx-auto mb-2\" src=\"img/profile.jpg\" alt=\"\"> -->\n      </span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n        <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n          <li class=\"nav-item dropdown\" ngbDropdown>\n            <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n              <a class=\"dropdown-item\" href=\"#\">Profile</a>\n              <a class=\"dropdown-item\" href=\"#\">Log out</a>\n            </div>\n          </li>\n        </ng-container>\n        <ng-template #notsignin>\n          <li class=\"nav-item \">\n            <a class=\"nav-link\" [attr.href]=\"url\">Sign in</a>\n          </li>\n        </ng-template>\n      </ul>\n    </div>\n  </nav>\n\n  <div class=\"container-fluid p-0\">\n\n<ng-container *ngIf=\"profile != null\">\n  <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"experience\">\n    <div class=\"my-auto\">\n      <h2 class=\"mb-5\" ><a [href]=\"profile.url\">{{profile.name}} ({{profile.username}})</a></h2>\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n            <img [src]=\"profile.imageUrl\" alt=\"\">\n        </div>\n      </div>\n\n    </div>\n  </section>\n<ng-container *ngIf=\"publication != null\">\n  <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"pub\">\n    <div class=\"my-auto\">\n      <h2 class=\"mb-5\" >Publications</h2>\n      <div class=\"row\" *ngFor=\"let pub of publication.data;let i=index\">\n        <div class=\"col-md-12\">\n          <div>\n              <img [src]=\"pub.imageUrl\" alt=\"\">\n          </div>\n            <div>\n                <a [href]=\"pub.url\">{{pub.name}}</a>\n            </div>\n            <div>\n            ``{{pub.description}}``\n            </div>\n            \n        </div>\n      </div>\n\n    </div>\n  </section>\n</ng-container>\n</ng-container>\n\n  </div>\n\n  <router-outlet></router-outlet>\n"
+module.exports = "<!-- <div class=\"container\">\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n    <a class=\"navbar-brand\" href=\"#\">Medium User Viewer</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item dropdown\" >\n            <a class=\"nav-link\" >หน้าหลัก</a>\n\n          </li>\n      </ul>\n      <div class=\"\">\n        <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n            <ng-container *ngIf=\"code != null && state != null;else notsignin\">\n            <li class=\"nav-item dropdown\" ngbDropdown >\n                <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n                  <a class=\"dropdown-item\" href=\"#\">Profile</a>\n                  <a class=\"dropdown-item\" href=\"#\">Log out</a>\n                </div>\n              </li>\n            </ng-container>\n            <ng-template #notsignin>\n              <li class=\"nav-item \"  >\n                <a class=\"nav-link\"  [attr.href]=\"url\">Sign in</a>\n              </li>\n            </ng-template>\n          </ul>\n        </div>\n    </div>\n  </nav>\n</div> -->\n\n\n<body id=\"page-top\">\n\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary fixed-top\" id=\"sideNav\">\n    <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">\n      <span class=\"d-block d-lg-none\">Medium User Viewer </span>\n      <span class=\"d-none d-lg-block\">\n        <!-- <img class=\"img-fluid img-profile rounded-circle mx-auto mb-2\" src=\"img/profile.jpg\" alt=\"\"> -->\n      </span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\" my-2 my-lg-0 navbar-nav mr-auto\">\n        <ng-container *ngIf=\"profile != null ;else notsignin\">\n          <li class=\"nav-item dropdown\" ngbDropdown>\n            <a class=\"nav-link dropdown-toggle\" id=\"dropdown01\" ngbDropdownToggle>จัดการ</a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\" ngbDropdownMenu>\n              <!-- <a class=\"dropdown-item\" href=\"#\">Profile</a> -->\n              <a class=\"dropdown-item\" (click)=\"logout()\">Log out</a>\n            </div>\n          </li>\n        </ng-container>\n        <ng-template #notsignin>\n          <li class=\"nav-item \">\n            <a class=\"nav-link\" [attr.href]=\"url\">Sign in</a>\n          </li>\n        </ng-template>\n      </ul>\n    </div>\n  </nav>\n\n  <div class=\"container-fluid p-0\">\n\n<ng-container *ngIf=\"profile != null\">\n  <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"experience\">\n    <div class=\"my-auto\">\n      <h2 class=\"mb-5\" ><a [href]=\"profile.url\">{{profile.name}} ({{profile.username}})</a></h2>\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n            <img [src]=\"profile.imageUrl\" alt=\"\">\n        </div>\n      </div>\n\n    </div>\n  </section>\n<ng-container *ngIf=\"publication != null\">\n  <section class=\"resume-section p-3 p-lg-5 d-flex flex-column\" id=\"pub\">\n    <div class=\"my-auto\">\n      <h2 class=\"mb-5\" >Publications</h2>\n      <div class=\"row\" *ngFor=\"let pub of publication.data;let i=index\">\n        <div class=\"col-md-12\">\n          <div>\n              <img [src]=\"pub.imageUrl\" alt=\"\">\n          </div>\n            <div>\n                <a [href]=\"pub.url\">{{pub.name}}</a>\n            </div>\n            <div>\n            ``{{pub.description}}``\n            </div>\n            \n        </div>\n      </div>\n\n    </div>\n  </section>\n</ng-container>\n</ng-container>\n\n  </div>\n\n  <router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -56,9 +56,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent(api, router) {
         // this.api.get(this.url, '');
-        //   console.log(this.activatedRoute)
+        //   // console.log(this.activatedRoute)
         //   this.activatedRoute.params.subscribe(params => {
-        var _this = this;
         this.api = api;
         this.router = router;
         this.title = 'app';
@@ -73,52 +72,77 @@ var AppComponent = /** @class */ (function () {
         this.profile = null;
         this.publication = null;
         // });
-        console.log(this.getParameterByName('code'), 'TEST');
-        if (this.getParameterByName('code') && this.getParameterByName('state')) {
-            this.code = this.getParameterByName('code');
-            this.state = this.getParameterByName('state');
-            localStorage.setItem('code', this.code);
-            localStorage.setItem('state', this.state);
-            // const param = {
-            //   'code': this.code,
-            //   'client_id': environment.client_id,
-            //   'client_secret': environment.client_secret,
-            //   'grant_type': authorization_code,
-            //   'redirect_uri': environment.return_url,
-            // };
-            var data = "code=" + this.code + "&client_id=" + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].client_id + "&client_secret=" + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].client_secret + "&grant_type=authorization_code&redirect_uri=" + encodeURIComponent(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].return_url);
-            console.log('data:', data);
-            this.api.medium_api_post('/v1/tokens', data).subscribe(function (res) {
-                console.log(res, 'RES DATA');
-                _this.token_type = res.token_type;
-                _this.access_token = res.access_token;
-                _this.refresh_token = res.refresh_token;
-                _this.scope = res.scope;
-                _this.expires_at = res.expires_at;
-                var to = _this.token_type + " " + _this.access_token;
-                var data2 = {
-                    token: to,
-                    path: '/v1/me'
-                };
-                _this.api.post_test('/api', data2).subscribe(function (res_user) {
-                    console.log(res_user, 'RES USER');
-                    _this.profile = res_user.data;
-                    data2.path = '/v1/users/' + _this.profile.id + '/publications';
-                    _this.api.post_test('/api', data2).subscribe(function (pub) {
-                        console.log(pub);
-                        _this.publication = pub;
-                    });
-                });
-                _this.router.navigate(['/index']);
-            });
+        // // console.log(this.getParameterByName('code'), 'TEST');
+        // let checklogin = localStorage.get('TokenMedium');
+        // if (checklogin) {
+        //   checklogin = JSON.parse(checklogin);
+        // } else {
+        //   checklogin = null;
+        // }
+        if ((this.getParameterByName('code') && this.getParameterByName('state'))) {
+            this.code = this.getParameterByName('code') || localStorage.getItem('code');
+            this.state = this.getParameterByName('state') || localStorage.getItem('state');
+            this.getToken();
+        }
+        else if (localStorage.getItem('TokenMedium')) {
+            this.getProfilePublic();
         }
         else {
             this.code = null;
             this.state = null;
-            localStorage.removeItem('code');
-            localStorage.removeItem('state');
         }
     }
+    AppComponent.prototype.getToken = function () {
+        var _this = this;
+        var data = "code=" + this.code + "&client_id=" + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].client_id + "&client_secret=" + __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].client_secret + "&grant_type=authorization_code&redirect_uri=" + encodeURIComponent(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].return_url);
+        // console.log('data:', data);
+        this.api.medium_api_post('/v1/tokens', data).subscribe(function (res) {
+            // console.log(res, 'RES DATA');
+            localStorage.setItem('TokenMedium', JSON.stringify(res));
+            _this.token_type = res.token_type;
+            _this.access_token = res.access_token;
+            _this.refresh_token = res.refresh_token;
+            _this.scope = res.scope;
+            _this.expires_at = res.expires_at;
+            _this.getProfilePublic();
+            _this.router.navigate(['/index']);
+        });
+    };
+    AppComponent.prototype.logout = function () {
+        localStorage.removeItem('TokenMedium');
+        this.token_type = null;
+        this.access_token = null;
+        this.refresh_token = null;
+        this.scope = null;
+        this.expires_at = null;
+        location.reload();
+    };
+    AppComponent.prototype.getProfilePublic = function () {
+        var _this = this;
+        if (localStorage.getItem('TokenMedium')) {
+            var res = JSON.parse(localStorage.getItem('TokenMedium'));
+            this.token_type = res['token_type'];
+            this.access_token = res['access_token'];
+            this.refresh_token = res['refresh_token'];
+            this.scope = res['scope'];
+            this.expires_at = res['expires_at'];
+        }
+        var to = this.token_type + " " + this.access_token;
+        // console.log(to,'TOEKN');
+        var data2 = {
+            token: to,
+            path: '/v1/me'
+        };
+        this.api.post_test('/api', data2).subscribe(function (res_user) {
+            // console.log(res_user, 'RES USER');
+            _this.profile = res_user.data;
+            data2.path = '/v1/users/' + _this.profile.id + '/publications';
+            _this.api.post_test('/api', data2).subscribe(function (pub) {
+                // console.log(pub);
+                _this.publication = pub;
+            });
+        });
+    };
     AppComponent.prototype.getParameterByName = function (name) {
         var url = window.location.href;
         name = name.replace(/[\[\]]/g, '\\$&');
